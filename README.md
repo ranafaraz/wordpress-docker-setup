@@ -28,6 +28,7 @@ services:
       - ./wp_root:/bitnami/wordpress  # Local directory for WordPress code
     networks:
       - wordpress-network
+    user: "0:0"  # Run as root user (UID 0)
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
